@@ -4,7 +4,8 @@
   "info": {
     "singularName": "goal",
     "pluralName": "goals",
-    "displayName": "Goal"
+    "displayName": "Goal",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
     "completed": {
       "type": "boolean",
       "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     },
     "tasks": {
       "type": "relation",
