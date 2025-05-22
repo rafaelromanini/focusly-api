@@ -4,52 +4,46 @@
 
 // import { factories } from '@strapi/strapi';
 
-
-// Core Router
-//import { factories } from '@strapi/strapi';
-//export default factories.createCoreRouter('api::goal.goal');
-
-
 export default {
   routes: [
     {
-      method: 'GET',
-      path: '/goals',
-      handler: 'api::goal.goal.find',
+      method: "GET",
+      path: "/goals",
+      handler: "api::goal.goal.find",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'POST',
-      path: '/goals',
-      handler: 'api::goal.goal.create',
+      method: "POST",
+      path: "/goals",
+      handler: "api::goal.goal.create",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'PUT',
-      path: '/goals/:id',
-      handler: 'api::goal.goal.update',
+      method: "PUT",
+      path: "/goals/:id",
+      handler: "api::goal.goal.update",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'DELETE',
-      path: '/goals/:id',
-      handler: 'api::goal.goal.delete',
+      method: "DELETE",
+      path: "/goals/:id",
+      handler: "api::goal.goal.delete",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'GET',
-      path: '/goals/:id',
-      handler: 'api::goal.goal.findOne',
+      method: "GET",
+      path: "/goals/:id",
+      handler: "api::goal.goal.findOne",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
   ],

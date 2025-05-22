@@ -2,49 +2,46 @@
  * task router
  */
 
-// import { factories } from '@strapi/strapi';
-// export default factories.createCoreRouter('api::task.task');
-
 export default {
   routes: [
     {
-      method: 'GET',
-      path: '/tasks',
-      handler: 'api::task.task.find',
+      method: "GET",
+      path: "/tasks",
+      handler: "api::task.task.find",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'POST',
-      path: '/tasks',
-      handler: 'api::task.task.create',
+      method: "POST",
+      path: "/tasks",
+      handler: "api::task.task.create",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'PUT',
-      path: '/tasks/:id',
-      handler: 'api::task.task.update',
+      method: "PUT",
+      path: "/tasks/:id",
+      handler: "api::task.task.update",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'DELETE',
-      path: '/tasks/:id',
-      handler: 'api::task.task.delete',
+      method: "DELETE",
+      path: "/tasks/:id",
+      handler: "api::task.task.delete",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
     {
-      method: 'GET',
-      path: '/tasks/:id',
-      handler: 'api::task.task.findOne',
+      method: "GET",
+      path: "/tasks/:id",
+      handler: "api::task.task.findOne",
       config: {
-        auth: false,
+        auth: { enabled: true },
       },
     },
   ],
